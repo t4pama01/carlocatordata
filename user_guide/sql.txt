@@ -1,0 +1,13 @@
+CREATE DATABASE carlocatordata;
+
+USE carlocatordata;
+
+CREATE TABLE data (
+id INT PRIMARY KEY auto_increment,
+Latitude DOUBLE PRECISION,
+Longitude DOUBLE PRECISION,
+Date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) Engine=InnoDB;
+
+GRANT ALL ON carlocatordata.* TO 'ci_user'@'localhost' IDENTIFIED BY 'ci_pass';
+
